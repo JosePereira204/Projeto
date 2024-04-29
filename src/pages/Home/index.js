@@ -11,13 +11,8 @@ const Home = () => {
 
   return (
     <C.Container>
-<<<<<<< HEAD
-      <C.Title>Home</C.Title>
-      <Button Text="Sair" onClick={() => [signout(), navigate("/")]} >
-=======
       <C.Title>Controle Financeiro</C.Title>
       <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
->>>>>>> 67760332c6d847e856841959ae0176485ad502e6
         Sair
       </Button>
       <ControleFinanceiro /> {/* Renderizando o componente ControleFinanceiro */}
