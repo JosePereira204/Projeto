@@ -1,12 +1,12 @@
 // Home.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
 import useAuth from "../../hooks/useAuth";
 import * as C from "./styles";
 import ControleFinanceiro from "../../components/ControleFinanceiro"; // Importando o componente ControleFinanceiro
 import Resume from "../../components/Resume";
 import Form from "../../components/Form";
+import Navbar from '../../components/NavBar';
 
 const Home = () => {
   const { signout } = useAuth();
@@ -49,9 +49,7 @@ const Home = () => {
 
   return (
     <C.Container>
-      <Button Text="Sair" onClick={() => [signout(), navigate("/")]}>
-        Sair
-      </Button>
+      <Navbar />
       <ControleFinanceiro /> {/* Renderizando o componente ControleFinanceiro */}
       <Resume income={income} expense={expense} total={total} /> {/* Renderizando o componente Resume */}
       <Form
