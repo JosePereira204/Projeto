@@ -1,19 +1,16 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle`
-
+const Global = createGlobalStyle`
+  
   * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
   }
 
   body {
-    width: 100vw;
-    height: 100vh;
-    background-color: #f0f2f5;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: 'Poppins', Sans-Serif;
+    background-color: #f2f2f2;
   }
 `;
 
-export default GlobalStyle;
+export default Global;
