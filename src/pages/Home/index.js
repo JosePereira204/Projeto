@@ -1,7 +1,5 @@
 // Home.js
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
 import * as C from "./styles";
 import ControleFinanceiro from "../../components/ControleFinanceiro"; // Importando o componente ControleFinanceiro
 import Resume from "../../components/Resume";
@@ -9,8 +7,6 @@ import Form from "../../components/Form";
 import Navbar from '../../components/NavBar';
 
 const Home = () => {
-  const { signout } = useAuth();
-  const navigate = useNavigate();
 
   const data = localStorage.getItem("transactions");
   const [transactionsList, setTransactionsList] = useState(
