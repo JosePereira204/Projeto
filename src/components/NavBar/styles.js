@@ -5,8 +5,7 @@ export const NavbarContainer = styled.nav`
   justify-content: flex-end;
   align-items: center;
   padding: 10px;
-  background-color: teal;
-  color: #fff;
+  background-color: black;
 `;
 
 export const NavList = styled.ul`
