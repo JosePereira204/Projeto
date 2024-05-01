@@ -4,7 +4,7 @@ import * as C from "./styles";
 import ControleFinanceiro from "../../components/ControleFinanceiro"; 
 import Resume from "../../components/Resume";
 import Form from "../../components/Form";
-import Navbar from '../../components/NavBar';
+import Navbar from '../../components/NavBarHome';
 
 const Home = () => {
 

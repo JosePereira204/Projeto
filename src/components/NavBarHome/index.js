@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavbarContainer, NavList, NavItem, NavLink, LogoutButton } from './styles'; // Importando os estilos
 
-function Navbar() {
+function HomeNavbar() {
     return (
         <NavbarContainer>
             <NavList>
@@ -20,4 +20,4 @@ function handleLogout() {
 }
 
 
-export default Navbar;
+export default HomeNavbar;
