@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+Este projeto foi inicializado com o Create React App.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Scripts Disponíveis 
 
-## Available Scripts
+No diretório do projeto, você pode executar os seguintes comandos:
 
-In the project directory, you can run:
+### Node Package Manager (npm) 
 
-### `yarn start`
+O npm é o gerenciador de pacotes padrão para o Node.js. Ele permite que os usuários instalem e atualizem pacotes de bibliotecas compartilhadas. Para instalar as dependências do projeto, você pode usar o comando npm install no diretório raiz do projeto.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm install
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Yarn 
 
-### `yarn test`
+O Yarn é outro gerenciador de pacotes popular. Para instalar globalmente, você pode usar o comando npx yarn --global.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npx yarn --global
 
-### `yarn build`
+### React Icons 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+O React Icons inclui bibliotecas populares de ícones que podem ser usadas em projetos React. Para instalar, você pode usar o comando npm install react-icons.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm install react-icons
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### React Router DOM 
 
-### `yarn eject`
+O React Router DOM é uma biblioteca para lidar com roteamento em aplicações React. Para adicionar ao seu projeto, você pode usar o comando yarn add react-router-dom.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+yarn add react-router-dom
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Componentes React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Os Componentes React são uma biblioteca de componentes reutilizáveis para React. Para adicionar ao seu projeto, você pode usar o comando yarn add react-components.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+yarn add react-components
 
-## Learn More
+### yarn start 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Executa o aplicativo no modo de desenvolvimento. Abra http://localhost:3000 no seu navegador para visualizá-lo. A página será recarregada quando você fizer alterações. Você também pode ver quaisquer erros de lint no console.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### yarn test 
 
-### Code Splitting
+Inicia o executor de testes no modo interativo. Consulte a seção sobre a execução de testes para obter mais informações.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### yarn build 
 
-### Analyzing the Bundle Size
+Compila o aplicativo para produção na pasta build. Ele agrupa corretamente o React no modo de produção e otimiza a compilação para obter o melhor desempenho.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Uso 
 
-### Making a Progressive Web App
+Após instalar todas as dependências, você pode iniciar o servidor de desenvolvimento com 
+#### npm start 
+ou 
+#### yarn start 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Isso será de acordo com a depedência do gerenciador de pacotes que você está usando.
