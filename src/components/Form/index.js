@@ -63,14 +63,14 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
             name="group1"
             onChange={() => setExpense(false)}
           />
-          <C.Label htmlFor="rIncome">Entrada</C.Label>
+          <C.Label htmlFor="rIncome">Receita</C.Label>
           <C.Input
             type="radio"
             id="rExpenses"
             name="group1"
             onChange={() => setExpense(true)}
           />
-          <C.Label htmlFor="rExpenses">Saída</C.Label>
+          <C.Label htmlFor="rExpenses">Despesa</C.Label>
         </C.RadioGroup>
         <C.Button onClick={handleSave}>ADICIONAR</C.Button>
       </C.Container>

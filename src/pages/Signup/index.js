@@ -24,7 +24,7 @@ const Signup = () => {
       setError("Os e-mails não são iguais");
       return;
     } else if(senha !== confir_senha){
-      setError("As senha não são iguais");
+      setError("As senhas não são iguais");
       return;
     }
 
