@@ -13,15 +13,15 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     if (!desc || !amount) {
       alert("Informe a descrição e o valor!");
       return;
-    } else if (amount < 1) {
-      alert("O valor tem que ser positivo!");
+    } else if (parseFloat(amount) <= 0 || isNaN(parseFloat(amount))) {
+      alert("O valor tem que ser um número positivo!");
       return;
     }
 
     const transaction = {
       id: generateID(),
       desc: desc,
-      amount: amount,
+      amount: parseFloat(amount),
       expense: isExpense,
     };
 
@@ -29,6 +29,19 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
 
     setDesc("");
     setAmount("");
+  };
+
+  const formatCurrency = (value) => {
+    const formatter = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+    return formatter.format(value);
+  };
+
+  const handleChangeAmount = (e) => {
+    const value = e.target.value.replace(/\D/g, ''); // Removendo caracteres não numéricos
+    setAmount(value);
   };
 
   return (
@@ -41,9 +54,9 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
         <C.InputContent>
           <C.Label>Valor</C.Label>
           <C.Input
-            value={amount}
-            type="number"
-            onChange={(e) => setAmount(e.target.value)}
+            value={amount !== "" ? formatCurrency(parseFloat(amount) / 100) : ""}
+            type="text"
+            onChange={handleChangeAmount}
           />
         </C.InputContent>
         <C.RadioGroup>
@@ -52,14 +65,14 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
             id="rIncome"
             defaultChecked
             name="group1"
-            onChange={() => setExpense(!isExpense)}
+            onChange={() => setExpense(false)}
           />
           <C.Label htmlFor="rIncome">Entrada</C.Label>
           <C.Input
             type="radio"
             id="rExpenses"
             name="group1"
-            onChange={() => setExpense(!isExpense)}
+            onChange={() => setExpense(true)}
           />
           <C.Label htmlFor="rExpenses">Saída</C.Label>
         </C.RadioGroup>

@@ -19,5 +19,4 @@ function handleLogout() {
     window.location.href = '/login'; // Redireciona para a página de login
 }
 
-
 export default HomeNavbar;

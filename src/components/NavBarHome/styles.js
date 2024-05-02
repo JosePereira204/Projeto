@@ -17,7 +17,8 @@ export const NavItem = styled.li`
   margin-left: 30px;
 `;
 
-export const NavLink = styled.a`
+// Estilização para links na barra de navegação e para o botão de logout
+const linkStyles = `
   text-decoration: none;
   color: #fff;
   &:hover {
@@ -25,12 +26,13 @@ export const NavLink = styled.a`
   }
 `;
 
+export const NavLink = styled.a`
+  ${linkStyles}
+`;
+
 export const LogoutButton = styled.button`
+  ${linkStyles}
   background-color: transparent;
-  color: #fff;
   border: none;
   cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
 `;
