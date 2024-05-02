@@ -7,10 +7,18 @@ import {
 } from "react-icons/fa";
 
 const GridItem = ({ item, onDelete }) => {
+  const formatCurrency = (value) => {
+    const formatter = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    });
+    return formatter.format(value / 100); // Convertendo centavos para reais
+  };
+
   return (
     <C.Tr>
       <C.Td>{item.desc}</C.Td>
-      <C.Td>{item.amount}</C.Td>
+      <C.Td>{formatCurrency(item.amount)}</C.Td>
       <C.Td alignCenter>
         {item.expense ? (
           <FaRegArrowAltCircleDown color="red" />
