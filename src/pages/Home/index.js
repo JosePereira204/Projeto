@@ -20,21 +20,21 @@ const Home = () => {
     const amountExpense = transactionsList
       .filter((item) => item.expense)
       .map((transaction) => Number(transaction.amount));
-
+  
     const amountIncome = transactionsList
       .filter((item) => !item.expense)
       .map((transaction) => Number(transaction.amount));
-
-    const expense = amountExpense.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-    const income = amountIncome.reduce((acc, cur) => acc + cur, 0).toFixed(2);
-
-    const total = Math.abs(income - expense).toFixed(2);
-
-    setIncome(`R$ ${income}`);
-    setExpense(`R$ ${expense}`);
-    setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`);
+  
+    const expense = amountExpense.reduce((acc, cur) => acc + cur, 0);
+    const income = amountIncome.reduce((acc, cur) => acc + cur, 0);
+  
+    const total = Math.abs(income - expense);
+  
+    setIncome(`R$ ${expense.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    setExpense(`R$ ${income.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
+    setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`);
   }, [transactionsList]);
-
+  
   const handleAdd = (transaction) => {
     const newArrayTransactions = [...transactionsList, transaction];
 

@@ -12,8 +12,9 @@ const GridItem = ({ item, onDelete }) => {
       style: "currency",
       currency: "BRL",
     });
-    return formatter.format(value / 100); // Convertendo centavos para reais
+    return formatter.format(value); 
   };
+  
 
   return (
     <C.Tr>

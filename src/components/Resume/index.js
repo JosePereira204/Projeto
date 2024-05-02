@@ -11,12 +11,12 @@ const Resume = ({ income, expense, total }) => {
   return (
     <C.Container>
       <ResumeItem
-        title="Entradas"
+        title="Saídas"
         Icon={FaRegArrowAltCircleUp}
         value={income}
       />
       <ResumeItem
-        title="Saídas"
+        title="Entradas"
         Icon={FaRegArrowAltCircleDown}
         value={expense}
       />

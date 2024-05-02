@@ -31,18 +31,14 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     setAmount("");
   };
 
-  const formatCurrency = (value) => {
-    const formatter = new Intl.NumberFormat("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    });
-    return formatter.format(value);
-  };
 
   const handleChangeAmount = (e) => {
-    const value = e.target.value.replace(/\D/g, ''); // Removendo caracteres não numéricos
-    setAmount(value);
+    const value = e.target.value.replace(',', '.');
+    if (!isNaN(value) || value === '') {
+      setAmount(value);
+    }
   };
+  
 
   return (
     <>
@@ -54,7 +50,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
         <C.InputContent>
           <C.Label>Valor</C.Label>
           <C.Input
-            value={amount !== "" ? formatCurrency(parseFloat(amount) / 100) : ""}
+            value={amount}
             type="text"
             onChange={handleChangeAmount}
           />
